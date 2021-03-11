@@ -152,6 +152,10 @@ class MessagesController extends Controller
      */
     public function destroy(Message $message)
     {
-        //
+        // データベースからデータを削除
+        $message->delete();
+        
+        // index action へリダイレクト
+        return redirect('/');
     }
 }
