@@ -87,7 +87,8 @@ class MessagesController extends Controller
      */
     public function show(Message $message)
     {
-        //
+        // データを引き連れてviewへ移動
+        return view('messages.show', compact('message'));
     }
 
     /**
